@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: yr6vyd33c-go-gitops
+  description: This is GitOps manifest for yr6vyd33c-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: yr6vyd33c-go
+    janus-idp.io/tekton: yr6vyd33c-go
+    backstage.io/kubernetes-id: yr6vyd33c-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:yr6vyd33c-go
